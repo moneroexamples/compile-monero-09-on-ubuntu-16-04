@@ -19,7 +19,14 @@ sudo apt-get install build-essential cmake libboost-all-dev miniupnpc libunbound
 # sudo apt-get install git build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen
 ```
 
-## Compilation of the latest version of the source code
+## Compilation
+
+You can compile either latest version of the source code, or tagged version.
+For the bleading edge features, use the latest version. However, this might
+be not stable and buggy. For stable version, compile tagged version of the
+source code, e.g., v0.9.3.
+
+### Latest version of the source code
 Having the dependencies, we can download the current github Monero version and compile it as follows:
 
 ```bash
@@ -37,16 +44,13 @@ make # or make -j number_of_threads, e.g., make -j 2
 # avid problems if there are compilation errors with compiling the tests
 ```
 
-Please not that this is a current version of Monero on github, **not the offical and stable
+Please not that this is a current version of Monero on github, **not the official and stable
 release**. Thus, as the development of Monero continues virtually on daily basis, sometimes
 things can break, including the compilation procedure provided.
 To avoid this, please use the source code and binary files of the official and stable release of
 Monero which can be found [here](https://github.com/monero-project/bitmonero/releases/latest).
 
-Alternatively,
-a tagged version of the source code can be checkout, as shown below.
-
-## Compilation of a stable tagged version
+### Stable tagged version
 The latest version of the source code can contain many bugs, as its not yet
 officially released. Thus, one can compile official tagged version, e.g., **0.9.3**:
 
@@ -60,7 +64,8 @@ cd bitmonero/
 # list all tags
 git tag
 
-# select which version to checkout. For example, to checkout tag v0.9.3
+# select which version to checkout.
+# For example, to checkout tag v0.9.3
 git checkout -b v0.9.3
 
 # compile
@@ -386,7 +391,7 @@ Full `/opt/bitmonero-dev/` tree is [here](https://github.com/moneroexamples/comp
 
 ## Other examples
 Other examples can be found on  [github](https://github.com/moneroexamples?tab=repositories).
-Please know that some of the examples/repositotires are not
+Please know that some of the examples/repositories are not
 finished and may not work as intended.
 
 ## How can you help?
