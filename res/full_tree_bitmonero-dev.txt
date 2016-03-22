@@ -1,0 +1,559 @@
+/opt/bitmonero-dev/headers/
+├── build
+│   └── release
+│       ├── miniupnpcstrings.h
+│       └── version
+│           └── version.h
+├── contrib
+│   ├── epee
+│   │   ├── demo
+│   │   │   ├── demo_http_server
+│   │   │   │   ├── demo_http_server.h
+│   │   │   │   ├── stdafx.h
+│   │   │   │   └── targetver.h
+│   │   │   ├── demo_levin_server
+│   │   │   │   ├── demo_levin_server.h
+│   │   │   │   ├── stdafx.h
+│   │   │   │   └── targetver.h
+│   │   │   └── iface
+│   │   │       └── transport_defs.h
+│   │   ├── include
+│   │   │   ├── ado_db_helper.h
+│   │   │   ├── console_handler.h
+│   │   │   ├── copyable_atomic.h
+│   │   │   ├── file_io_utils.h
+│   │   │   ├── global_stream_operators.h
+│   │   │   ├── gzip_encoding.h
+│   │   │   ├── hmac-md5.h
+│   │   │   ├── include_base_utils.h
+│   │   │   ├── math_helper.h
+│   │   │   ├── md5global.h
+│   │   │   ├── md5_l.h
+│   │   │   ├── misc_language.h
+│   │   │   ├── misc_log_ex.h
+│   │   │   ├── misc_os_dependent.h
+│   │   │   ├── net
+│   │   │   │   ├── abstract_tcp_server2.h
+│   │   │   │   ├── abstract_tcp_server_cp.h
+│   │   │   │   ├── abstract_tcp_server.h
+│   │   │   │   ├── http_base.h
+│   │   │   │   ├── http_client_abstract_invoke.h
+│   │   │   │   ├── http_client_base.h
+│   │   │   │   ├── http_client.h
+│   │   │   │   ├── http_client_via_api_helper.h
+│   │   │   │   ├── http_protocol_handler.h
+│   │   │   │   ├── http_server_cp2.h
+│   │   │   │   ├── http_server_cp.h
+│   │   │   │   ├── http_server_handlers_map2.h
+│   │   │   │   ├── http_server_impl_base.h
+│   │   │   │   ├── http_server_thread_per_connect.h
+│   │   │   │   ├── jsonrpc_protocol_handler.h
+│   │   │   │   ├── jsonrpc_server_handlers_map.h
+│   │   │   │   ├── jsonrpc_server_impl_base.h
+│   │   │   │   ├── jsonrpc_structs.h
+│   │   │   │   ├── levin_base.h
+│   │   │   │   ├── levin_client_async.h
+│   │   │   │   ├── levin_client.h
+│   │   │   │   ├── levin_helper.h
+│   │   │   │   ├── levin_protocol_handler_async.h
+│   │   │   │   ├── levin_protocol_handler.h
+│   │   │   │   ├── levin_server_cp2.h
+│   │   │   │   ├── levin_server_cp.h
+│   │   │   │   ├── local_ip.h
+│   │   │   │   ├── multiprotocols_server.h
+│   │   │   │   ├── munin_connection_handler.h
+│   │   │   │   ├── munin_node_server.h
+│   │   │   │   ├── net_helper.h
+│   │   │   │   ├── net_parse_helpers.h
+│   │   │   │   ├── net_utils_base.h
+│   │   │   │   ├── protocol_switcher.h
+│   │   │   │   ├── rpc_method_name.h
+│   │   │   │   ├── smtp.h
+│   │   │   │   └── smtp_helper.h
+│   │   │   ├── pragma_comp_defs.h
+│   │   │   ├── profile_tools.h
+│   │   │   ├── reg_exp_definer.h
+│   │   │   ├── reg_utils.h
+│   │   │   ├── serialization
+│   │   │   │   ├── enableable.h
+│   │   │   │   ├── keyvalue_serialization.h
+│   │   │   │   ├── keyvalue_serialization_overloads.h
+│   │   │   │   └── serialize_base.h
+│   │   │   ├── service_impl_base.h
+│   │   │   ├── sha1.h
+│   │   │   ├── soci_helper.h
+│   │   │   ├── static_initializer.h
+│   │   │   ├── storages
+│   │   │   │   ├── activity_notifier.h
+│   │   │   │   ├── crypted_storage.h
+│   │   │   │   ├── gzipped_inmemstorage.h
+│   │   │   │   ├── http_abstract_invoke.h
+│   │   │   │   ├── levin_abstract_invoke2.h
+│   │   │   │   ├── parserse_base_utils.h
+│   │   │   │   ├── portable_storage_base.h
+│   │   │   │   ├── portable_storage_from_bin.h
+│   │   │   │   ├── portable_storage_from_json.h
+│   │   │   │   ├── portable_storage.h
+│   │   │   │   ├── portable_storage_template_helper.h
+│   │   │   │   ├── portable_storage_to_bin.h
+│   │   │   │   ├── portable_storage_to_json.h
+│   │   │   │   └── portable_storage_val_converters.h
+│   │   │   ├── string_coding.h
+│   │   │   ├── string_tools.h
+│   │   │   ├── syncobj.h
+│   │   │   ├── time_helper.h
+│   │   │   ├── tiny_ini.h
+│   │   │   ├── to_nonconst_iterator.h
+│   │   │   ├── warnings.h
+│   │   │   ├── winobj.h
+│   │   │   └── zlib_helper.h
+│   │   └── tests
+│   │       └── src
+│   │           ├── misc
+│   │           │   └── test_math.h
+│   │           ├── net
+│   │           │   └── test_net.h
+│   │           └── storages
+│   │               ├── portable_storages_test.h
+│   │               └── storage_tests.h
+│   └── otshell_utils
+│       └── windows_stream.h
+├── external
+│   ├── db_drivers
+│   │   └── liblmdb
+│   │       ├── lmdb.h
+│   │       └── midl.h
+│   ├── miniupnpc
+│   │   ├── codelength.h
+│   │   ├── connecthostport.h
+│   │   ├── igd_desc_parse.h
+│   │   ├── minisoap.h
+│   │   ├── minissdpc.h
+│   │   ├── miniupnpc_declspec.h
+│   │   ├── miniupnpc.h
+│   │   ├── miniupnpctypes.h
+│   │   ├── miniwget.h
+│   │   ├── minixml.h
+│   │   ├── portlistingparse.h
+│   │   ├── receivedata.h
+│   │   ├── upnpcommands.h
+│   │   ├── upnpdev.h
+│   │   ├── upnperrors.h
+│   │   └── upnpreplyparse.h
+│   ├── rapidjson
+│   │   ├── allocators.h
+│   │   ├── document.h
+│   │   ├── encodedstream.h
+│   │   ├── encodings.h
+│   │   ├── error
+│   │   │   ├── en.h
+│   │   │   └── error.h
+│   │   ├── filereadstream.h
+│   │   ├── filewritestream.h
+│   │   ├── internal
+│   │   │   ├── biginteger.h
+│   │   │   ├── diyfp.h
+│   │   │   ├── dtoa.h
+│   │   │   ├── ieee754.h
+│   │   │   ├── itoa.h
+│   │   │   ├── meta.h
+│   │   │   ├── pow10.h
+│   │   │   ├── stack.h
+│   │   │   ├── strfunc.h
+│   │   │   ├── strtod.h
+│   │   │   └── swap.h
+│   │   ├── memorybuffer.h
+│   │   ├── memorystream.h
+│   │   ├── msinttypes
+│   │   │   ├── inttypes.h
+│   │   │   └── stdint.h
+│   │   ├── pointer.h
+│   │   ├── prettywriter.h
+│   │   ├── rapidjson.h
+│   │   ├── reader.h
+│   │   ├── stringbuffer.h
+│   │   └── writer.h
+│   └── unbound
+│       ├── compat
+│       │   ├── chacha_private.h
+│       │   ├── fake-rfc2553.h
+│       │   └── memcmp.h
+│       ├── daemon
+│       │   ├── acl_list.h
+│       │   ├── cachedump.h
+│       │   ├── daemon.h
+│       │   ├── remote.h
+│       │   ├── stats.h
+│       │   └── worker.h
+│       ├── dns64
+│       │   └── dns64.h
+│       ├── dnstap
+│       │   └── dnstap.h
+│       ├── iterator
+│       │   ├── iterator.h
+│       │   ├── iter_delegpt.h
+│       │   ├── iter_donotq.h
+│       │   ├── iter_fwd.h
+│       │   ├── iter_hints.h
+│       │   ├── iter_priv.h
+│       │   ├── iter_resptype.h
+│       │   ├── iter_scrub.h
+│       │   └── iter_utils.h
+│       ├── libunbound
+│       │   ├── context.h
+│       │   ├── libworker.h
+│       │   ├── unbound-event.h
+│       │   ├── unbound.h
+│       │   └── worker.h
+│       ├── pythonmod
+│       │   ├── pythonmod.h
+│       │   └── pythonmod_utils.h
+│       ├── services
+│       │   ├── cache
+│       │   │   ├── dns.h
+│       │   │   ├── infra.h
+│       │   │   └── rrset.h
+│       │   ├── listen_dnsport.h
+│       │   ├── localzone.h
+│       │   ├── mesh.h
+│       │   ├── modstack.h
+│       │   ├── outbound_list.h
+│       │   └── outside_network.h
+│       ├── sldns
+│       │   ├── keyraw.h
+│       │   ├── parse.h
+│       │   ├── parseutil.h
+│       │   ├── pkthdr.h
+│       │   ├── rrdef.h
+│       │   ├── sbuffer.h
+│       │   ├── str2wire.h
+│       │   └── wire2str.h
+│       ├── testcode
+│       │   ├── checklocks.h
+│       │   ├── fake_event.h
+│       │   ├── readhex.h
+│       │   ├── replay.h
+│       │   ├── testpkts.h
+│       │   └── unitmain.h
+│       ├── util
+│       │   ├── alloc.h
+│       │   ├── config_file.h
+│       │   ├── configparser.h
+│       │   ├── configyyrename.h
+│       │   ├── data
+│       │   │   ├── dname.h
+│       │   │   ├── msgencode.h
+│       │   │   ├── msgparse.h
+│       │   │   ├── msgreply.h
+│       │   │   └── packed_rrset.h
+│       │   ├── fptr_wlist.h
+│       │   ├── locks.h
+│       │   ├── log.h
+│       │   ├── mini_event.h
+│       │   ├── module.h
+│       │   ├── netevent.h
+│       │   ├── net_help.h
+│       │   ├── random.h
+│       │   ├── rbtree.h
+│       │   ├── regional.h
+│       │   ├── rtt.h
+│       │   ├── storage
+│       │   │   ├── dnstree.h
+│       │   │   ├── lookup3.h
+│       │   │   ├── lruhash.h
+│       │   │   └── slabhash.h
+│       │   ├── timehist.h
+│       │   ├── tube.h
+│       │   └── winsock_event.h
+│       ├── validator
+│       │   ├── autotrust.h
+│       │   ├── val_anchor.h
+│       │   ├── validator.h
+│       │   ├── val_kcache.h
+│       │   ├── val_kentry.h
+│       │   ├── val_neg.h
+│       │   ├── val_nsec3.h
+│       │   ├── val_nsec.h
+│       │   ├── val_secalgo.h
+│       │   ├── val_sigcrypt.h
+│       │   └── val_utils.h
+│       └── winrc
+│           ├── w_inst.h
+│           └── win_svc.h
+├── include
+│   ├── INode.h
+│   └── IWallet.h
+├── src
+│   ├── blockchain_db
+│   │   ├── berkeleydb
+│   │   │   └── db_bdb.h
+│   │   ├── blockchain_db.h
+│   │   ├── db_types.h
+│   │   └── lmdb
+│   │       └── db_lmdb.h
+│   ├── blockchain_utilities
+│   │   ├── blockchain_utilities.h
+│   │   ├── blocksdat_file.h
+│   │   ├── bootstrap_file.h
+│   │   ├── bootstrap_serialization.h
+│   │   └── fake_core.h
+│   ├── blocks
+│   │   └── blocks.h
+│   ├── common
+│   │   ├── base58.h
+│   │   ├── boost_serialization_helper.h
+│   │   ├── command_line.h
+│   │   ├── dns_utils.h
+│   │   ├── http_connection.h
+│   │   ├── i18n.h
+│   │   ├── int-util.h
+│   │   ├── pod-class.h
+│   │   ├── rpc_client.h
+│   │   ├── scoped_message_writer.h
+│   │   ├── unordered_containers_boost_serialization.h
+│   │   ├── util.h
+│   │   └── varint.h
+│   ├── crypto
+│   │   ├── blake256.h
+│   │   ├── chacha8.h
+│   │   ├── crypto.h
+│   │   ├── crypto_ops_builder
+│   │   │   ├── api.h
+│   │   │   ├── crypto_int32.h
+│   │   │   ├── crypto-ops.h
+│   │   │   ├── crypto_sign.h
+│   │   │   ├── crypto_uint32.h
+│   │   │   ├── crypto_verify_32.h
+│   │   │   ├── include
+│   │   │   │   ├── sodium
+│   │   │   │   │   ├── crypto_int32.h
+│   │   │   │   │   ├── crypto_int64.h
+│   │   │   │   │   ├── crypto_uint16.h
+│   │   │   │   │   ├── crypto_uint32.h
+│   │   │   │   │   ├── crypto_uint64.h
+│   │   │   │   │   ├── crypto_uint8.h
+│   │   │   │   │   ├── crypto_verify_32.h
+│   │   │   │   │   └── randombytes.h
+│   │   │   │   └── sodium.h
+│   │   │   ├── ref10
+│   │   │   │   ├── api.h
+│   │   │   │   ├── base2.h
+│   │   │   │   ├── base.h
+│   │   │   │   ├── d2.h
+│   │   │   │   ├── d.h
+│   │   │   │   ├── fe.h
+│   │   │   │   ├── ge_add.h
+│   │   │   │   ├── ge.h
+│   │   │   │   ├── ge_madd.h
+│   │   │   │   ├── ge_msub.h
+│   │   │   │   ├── ge_p2_dbl.h
+│   │   │   │   ├── ge_sub.h
+│   │   │   │   ├── pow22523.h
+│   │   │   │   ├── pow225521.h
+│   │   │   │   ├── sc.h
+│   │   │   │   └── sqrtm1.h
+│   │   │   ├── ref10CommentedCombined
+│   │   │   │   ├── api.h
+│   │   │   │   ├── base2.h
+│   │   │   │   ├── base.h
+│   │   │   │   ├── crypto-ops.h
+│   │   │   │   ├── d2.h
+│   │   │   │   ├── d.h
+│   │   │   │   ├── fe.h
+│   │   │   │   ├── ge_add.h
+│   │   │   │   ├── ge.h
+│   │   │   │   ├── ge_madd.h
+│   │   │   │   ├── ge_msub.h
+│   │   │   │   ├── ge_p2_dbl.h
+│   │   │   │   ├── ge_sub.h
+│   │   │   │   ├── pow22523.h
+│   │   │   │   ├── pow225521.h
+│   │   │   │   ├── sc.h
+│   │   │   │   └── sqrtm1.h
+│   │   │   └── sha512.h
+│   │   ├── crypto-ops.h
+│   │   ├── generic-ops.h
+│   │   ├── groestl.h
+│   │   ├── groestl_tables.h
+│   │   ├── hash.h
+│   │   ├── hash-ops.h
+│   │   ├── initializer.h
+│   │   ├── jh.h
+│   │   ├── keccak.h
+│   │   ├── oaes_config.h
+│   │   ├── oaes_lib.h
+│   │   ├── random.h
+│   │   ├── skein.h
+│   │   └── skein_port.h
+│   ├── cryptonote_config.h
+│   ├── cryptonote_core
+│   │   ├── account_boost_serialization.h
+│   │   ├── account.h
+│   │   ├── blockchain.h
+│   │   ├── blockchain_storage_boost_serialization.h
+│   │   ├── blockchain_storage.h
+│   │   ├── checkpoints_create.h
+│   │   ├── checkpoints.h
+│   │   ├── connection_context.h
+│   │   ├── cryptonote_basic.h
+│   │   ├── cryptonote_basic_impl.h
+│   │   ├── cryptonote_boost_serialization.h
+│   │   ├── cryptonote_core.h
+│   │   ├── cryptonote_format_utils.h
+│   │   ├── cryptonote_stat_info.h
+│   │   ├── difficulty.h
+│   │   ├── hardfork.h
+│   │   ├── miner.h
+│   │   ├── tx_extra.h
+│   │   ├── tx_pool.h
+│   │   └── verification_context.h
+│   ├── cryptonote_protocol
+│   │   ├── blobdatatype.h
+│   │   ├── cryptonote_protocol_defs.h
+│   │   ├── cryptonote_protocol_handler_common.h
+│   │   └── cryptonote_protocol_handler.h
+│   ├── daemon
+│   │   ├── command_line_args.h
+│   │   ├── command_parser_executor.h
+│   │   ├── command_server.h
+│   │   ├── core.h
+│   │   ├── daemon.h
+│   │   ├── executor.h
+│   │   ├── p2p.h
+│   │   ├── protocol.h
+│   │   ├── rpc_command_executor.h
+│   │   └── rpc.h
+│   ├── daemonizer
+│   │   ├── daemonizer.h
+│   │   ├── posix_fork.h
+│   │   ├── windows_service.h
+│   │   └── windows_service_runner.h
+│   ├── miner
+│   │   ├── simpleminer.h
+│   │   ├── simpleminer_protocol_defs.h
+│   │   └── target_helper.h
+│   ├── mnemonics
+│   │   ├── electrum-words.h
+│   │   ├── english.h
+│   │   ├── german.h
+│   │   ├── italian.h
+│   │   ├── japanese.h
+│   │   ├── language_base.h
+│   │   ├── old_english.h
+│   │   ├── portuguese.h
+│   │   ├── russian.h
+│   │   ├── singleton.h
+│   │   └── spanish.h
+│   ├── p2p
+│   │   ├── net_node_common.h
+│   │   ├── net_node.h
+│   │   ├── net_peerlist_boost_serialization.h
+│   │   ├── net_peerlist.h
+│   │   ├── p2p_protocol_defs.h
+│   │   └── stdafx.h
+│   ├── platform
+│   │   ├── mingw
+│   │   │   └── alloca.h
+│   │   └── msc
+│   │       ├── alloca.h
+│   │       ├── inline_c.h
+│   │       ├── stdbool.h
+│   │       └── sys
+│   │           └── param.h
+│   ├── rpc
+│   │   ├── core_rpc_server_commands_defs.h
+│   │   ├── core_rpc_server_error_codes.h
+│   │   └── core_rpc_server.h
+│   ├── serialization
+│   │   ├── binary_archive.h
+│   │   ├── binary_utils.h
+│   │   ├── crypto.h
+│   │   ├── debug_archive.h
+│   │   ├── json_archive.h
+│   │   ├── json_utils.h
+│   │   ├── serialization.h
+│   │   ├── string.h
+│   │   ├── variant.h
+│   │   └── vector.h
+│   ├── simplewallet
+│   │   ├── password_container.h
+│   │   └── simplewallet.h
+│   └── wallet
+│       ├── wallet2.h
+│       ├── wallet_errors.h
+│       ├── wallet_rpc_server_commands_defs.h
+│       ├── wallet_rpc_server_error_codes.h
+│       └── wallet_rpc_server.h
+└── tests
+    ├── core_proxy
+    │   └── core_proxy.h
+    ├── core_tests
+    │   ├── block_reward.h
+    │   ├── block_validation.h
+    │   ├── chaingen.h
+    │   ├── chaingen_tests_list.h
+    │   ├── chain_split_1.h
+    │   ├── chain_switch_1.h
+    │   ├── double_spend.h
+    │   ├── integer_overflow.h
+    │   ├── ring_signature_1.h
+    │   ├── transaction_tests.h
+    │   ├── tx_validation.h
+    │   └── v2_tests.h
+    ├── crypto
+    │   └── crypto-tests.h
+    ├── functional_tests
+    │   ├── transactions_flow_test.h
+    │   └── transactions_generation_from_blockchain.h
+    ├── gtest
+    │   ├── include
+    │   │   └── gtest
+    │   │       ├── gtest-death-test.h
+    │   │       ├── gtest.h
+    │   │       ├── gtest-message.h
+    │   │       ├── gtest-param-test.h
+    │   │       ├── gtest_pred_impl.h
+    │   │       ├── gtest-printers.h
+    │   │       ├── gtest_prod.h
+    │   │       ├── gtest-spi.h
+    │   │       ├── gtest-test-part.h
+    │   │       ├── gtest-typed-test.h
+    │   │       └── internal
+    │   │           ├── custom
+    │   │           │   ├── gtest.h
+    │   │           │   ├── gtest-port.h
+    │   │           │   └── gtest-printers.h
+    │   │           ├── gtest-death-test-internal.h
+    │   │           ├── gtest-filepath.h
+    │   │           ├── gtest-internal.h
+    │   │           ├── gtest-linked_ptr.h
+    │   │           ├── gtest-param-util-generated.h
+    │   │           ├── gtest-param-util.h
+    │   │           ├── gtest-port-arch.h
+    │   │           ├── gtest-port.h
+    │   │           ├── gtest-string.h
+    │   │           ├── gtest-tuple.h
+    │   │           └── gtest-type-util.h
+    │   └── src
+    │       └── gtest-internal-inl.h
+    ├── io.h
+    ├── net_load_tests
+    │   └── net_load_tests.h
+    ├── performance_tests
+    │   ├── check_ring_signature.h
+    │   ├── cn_slow_hash.h
+    │   ├── construct_tx.h
+    │   ├── derive_public_key.h
+    │   ├── derive_secret_key.h
+    │   ├── generate_key_derivation.h
+    │   ├── generate_key_image.h
+    │   ├── generate_key_image_helper.h
+    │   ├── is_out_to_acc.h
+    │   ├── multi_tx_test_base.h
+    │   ├── performance_tests.h
+    │   ├── performance_utils.h
+    │   └── single_tx_test_base.h
+    └── unit_tests
+        └── unit_tests_utils.h
+
+87 directories, 469 files
