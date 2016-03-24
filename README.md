@@ -388,6 +388,17 @@ This should results in the following file structure:
 
 Full `/opt/bitmonero-dev/` tree is [here](https://github.com/moneroexamples/compile-monero-09-on-xubuntu-16-04-beta-1/blob/master/res/full_tree_bitmonero-dev.txt).
 
+## All in one go
+The above steps (except `rlwrap` setup) where composed into one script: [`monero_ubuntu_compiler.sh`](https://github.com/moneroexamples/compile-monero-09-on-ubuntu-16-04/blob/master/monero_ubuntu_compiler.sh).
+
+The scripts requires root access and deletes /opt/bitmonero and /opt/bitmonero-dev folders if exist
+prior to installation.
+
+To download and execute this script:
+
+```bash
+bash -c 'su -c "curl https://raw.githubusercontent.com/moneroexamples/compile-monero-09-on-ubuntu-16-04/master/monero_ubuntu_compiler.sh -o monero_ubuntu_compiler.sh && chmod +x monero_ubuntu_compiler.sh && ./monero_ubuntu_compiler.sh"'
+```
 
 ## Other examples
 Other examples can be found on  [github](https://github.com/moneroexamples?tab=repositories).
