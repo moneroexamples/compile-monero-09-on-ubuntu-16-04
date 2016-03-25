@@ -391,7 +391,7 @@ Full `/opt/bitmonero-dev/` tree is [here](https://github.com/moneroexamples/comp
 ## Shortcut
 The above steps (except `rlwrap` setup) where composed into one script: [`monero_ubuntu_compiler.sh`](https://github.com/moneroexamples/compile-monero-09-on-ubuntu-16-04/blob/master/monero_ubuntu_compiler.sh).
 
-The scripts requires root access and deletes /opt/bitmonero and /opt/bitmonero-dev folders if exist
+The scripts requires root access and **deletes ./bitmonero, /opt/bitmonero and /opt/bitmonero-dev folders** if exist
 prior to installation. So use it with **caution**!!!
 
 To download and execute this script:

@@ -25,6 +25,8 @@ apt-get -y install git build-essential cmake libboost-all-dev miniupnpc libunbou
 
 echo "Downloading latest Monero soruce code ..."
 
+rm -rvf ./bitmonero
+
 # download the latest bitmonero source code from github
 git clone https://github.com/monero-project/bitmonero.git
 
