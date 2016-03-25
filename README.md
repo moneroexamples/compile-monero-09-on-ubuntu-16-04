@@ -98,7 +98,7 @@ I usually move the binaries into `/opt/bitmonero/` folder. This can be done as f
 
 ```bash
 # optional
-sudo mkdir /opt/bitmonero
+sudo mkdir -p /opt/bitmonero
 sudo mv -v ./build/release/bin/* /opt/bitmonero/
 ```
 
