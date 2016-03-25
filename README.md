@@ -180,7 +180,7 @@ sudo mkdir -p /opt/bitmonero-dev/libs
 # assuming you are still in bitmonero/ folder which you downloaded from
 # github
 sudo find ./build/ -name '*.a' -exec cp -v {} /opt/bitmonero-dev/libs  \;
- ```
+```
 
  This should results in the following file structure:
 
@@ -220,7 +220,7 @@ sudo mkdir -p /opt/bitmonero-dev/headers
 # but this time the structure of directories is important
 # so rsync is used to find and copy the headers files
 sudo rsync -zarv --include="*/" --include="*.h" --exclude="*" --prune-empty-dirs ./ /opt/bitmonero-dev/headers
- ```
+```
 
 This should results in the following file structure:
 
