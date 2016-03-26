@@ -153,7 +153,7 @@ tab-complition and history for the monero programs.
 
 ## Example screenshot
 
-![Ubuntu Screeshot](https://raw.githubusercontent.com/moneroexamples/compile-monero-09-on-xubuntu-16-04-beta-1/master/imgs/ubuntu_screen.jpg)
+![Ubuntu Screeshot](https://github.com/moneroexamples/compile-monero-09-on-ubuntu-16-04/blob/master/imgs/ubuntu_screen.jpg)
 
 
 ## Monero C++11 development (optional)
