@@ -1,12 +1,12 @@
-# Compile Monero 0.9 on Ubuntu 16.04 x64 Beta
+# Compile Monero 0.9 on Ubuntu 16.04 x64 Final Beta
 
-The example shows how to compile the current github version of [Monero](https://getmonero.org/), as of 25 Mar 2015, on [Ubuntu 16.04 x64 Final Beta](http://www.omgubuntu.co.uk/2016/02/ubuntu-16-04-beta-1-download-flavors).
+The example shows how to compile the current github version of [Monero](https://getmonero.org/), as of 26 Mar 2015, on [Ubuntu 16.04 x64 Final Beta](https://lists.ubuntu.com/archives/ubuntu-announce/2016-March/000206.html).
 
 ## Dependencies
 Before proceeding with the compilation, the following packages are required:
 
 ```bash
-# update Xubuntu's repository
+# update Ubuntu's repository
 sudo apt-get update
 
 #install git to download latest Monero source code from github
@@ -22,7 +22,7 @@ sudo apt-get install build-essential cmake libboost-all-dev miniupnpc libunbound
 ## Compilation
 
 You can compile either latest version of the source code, or tagged version.
-For the bleading edge features, use the latest version. However, this might
+For the bleeding edge features, use the latest version. However, this might
 be not stable and buggy. For stable version, compile tagged version of the
 source code, e.g., v0.9.3.
 
@@ -257,136 +257,8 @@ This should results in the following file structure:
 │   ├── unordered_containers_boost_serialization.h
 │   ├── util.h
 │   └── varint.h
-├── crypto
-│   ├── blake256.h
-│   ├── chacha8.h
-│   ├── crypto.h
-│   ├── crypto_ops_builder
-│   │   ├── api.h
-│   │   ├── crypto_int32.h
-│   │   ├── crypto-ops.h
-│   │   ├── crypto_sign.h
-│   │   ├── crypto_uint32.h
-│   │   ├── crypto_verify_32.h
-│   │   ├── include
-│   │   ├── ref10
-│   │   ├── ref10CommentedCombined
-│   │   └── sha512.h
-│   ├── crypto-ops.h
-│   ├── generic-ops.h
-│   ├── groestl.h
-│   ├── groestl_tables.h
-│   ├── hash.h
-│   ├── hash-ops.h
-│   ├── initializer.h
-│   ├── jh.h
-│   ├── keccak.h
-│   ├── oaes_config.h
-│   ├── oaes_lib.h
-│   ├── random.h
-│   ├── skein.h
-│   └── skein_port.h
-├── cryptonote_config.h
-├── cryptonote_core
-│   ├── account_boost_serialization.h
-│   ├── account.h
-│   ├── blockchain.h
-│   ├── blockchain_storage_boost_serialization.h
-│   ├── blockchain_storage.h
-│   ├── checkpoints_create.h
-│   ├── checkpoints.h
-│   ├── connection_context.h
-│   ├── cryptonote_basic.h
-│   ├── cryptonote_basic_impl.h
-│   ├── cryptonote_boost_serialization.h
-│   ├── cryptonote_core.h
-│   ├── cryptonote_format_utils.h
-│   ├── cryptonote_stat_info.h
-│   ├── difficulty.h
-│   ├── hardfork.h
-│   ├── miner.h
-│   ├── tx_extra.h
-│   ├── tx_pool.h
-│   └── verification_context.h
-├── cryptonote_protocol
-│   ├── blobdatatype.h
-│   ├── cryptonote_protocol_defs.h
-│   ├── cryptonote_protocol_handler_common.h
-│   └── cryptonote_protocol_handler.h
-├── daemon
-│   ├── command_line_args.h
-│   ├── command_parser_executor.h
-│   ├── command_server.h
-│   ├── core.h
-│   ├── daemon.h
-│   ├── executor.h
-│   ├── p2p.h
-│   ├── protocol.h
-│   ├── rpc_command_executor.h
-│   └── rpc.h
-├── daemonizer
-│   ├── daemonizer.h
-│   ├── posix_fork.h
-│   ├── windows_service.h
-│   └── windows_service_runner.h
-├── miner
-│   ├── simpleminer.h
-│   ├── simpleminer_protocol_defs.h
-│   └── target_helper.h
-├── mnemonics
-│   ├── electrum-words.h
-│   ├── english.h
-│   ├── german.h
-│   ├── italian.h
-│   ├── japanese.h
-│   ├── language_base.h
-│   ├── old_english.h
-│   ├── portuguese.h
-│   ├── russian.h
-│   ├── singleton.h
-│   └── spanish.h
-├── p2p
-│   ├── net_node_common.h
-│   ├── net_node.h
-│   ├── net_peerlist_boost_serialization.h
-│   ├── net_peerlist.h
-│   ├── p2p_protocol_defs.h
-│   └── stdafx.h
-├── platform
-│   ├── mingw
-│   │   └── alloca.h
-│   └── msc
-│       ├── alloca.h
-│       ├── inline_c.h
-│       ├── stdbool.h
-│       └── sys
-├── rpc
-│   ├── core_rpc_server_commands_defs.h
-│   ├── core_rpc_server_error_codes.h
-│   └── core_rpc_server.h
-├── serialization
-│   ├── binary_archive.h
-│   ├── binary_utils.h
-│   ├── crypto.h
-│   ├── debug_archive.h
-│   ├── json_archive.h
-│   ├── json_utils.h
-│   ├── serialization.h
-│   ├── string.h
-│   ├── variant.h
-│   └── vector.h
-├── simplewallet
-│   ├── password_container.h
-│   └── simplewallet.h
-└── wallet
-    ├── wallet2.h
-    ├── wallet_errors.h
-    ├── wallet_rpc_server_commands_defs.h
-    ├── wallet_rpc_server_error_codes.h
-    └── wallet_rpc_server.h
+# ... the rest not shown to save some space
 ```
-
-Full `/opt/bitmonero-dev/` tree is [here](https://github.com/moneroexamples/compile-monero-09-on-xubuntu-16-04-beta-1/blob/master/res/full_tree_bitmonero-dev.txt).
 
 ## Shortcut
 The above steps (except `rlwrap` setup) where composed into one script: [`monero_ubuntu_compiler.sh`](https://github.com/moneroexamples/compile-monero-09-on-ubuntu-16-04/blob/master/monero_ubuntu_compiler.sh).
