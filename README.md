@@ -7,16 +7,16 @@ Before proceeding with the compilation, the following packages are required:
 
 ```bash
 # update Ubuntu's repository
-sudo apt-get update
+sudo apt update
 
 #install git to download latest Monero source code from github
-sudo apt-get install git
+sudo apt install git
 
 # install dependencies to be able to compile Monero
-sudo apt-get install build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen
+sudo apt install build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen
 
 # or git and all dependencies in one command
-# sudo apt-get install git build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen
+# sudo apt install git build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen
 ```
 
 ## Compilation
@@ -24,7 +24,7 @@ sudo apt-get install build-essential cmake libboost-all-dev miniupnpc libunbound
 You can compile either latest version of the source code, or tagged version.
 For the bleeding edge features, use the latest version. However, this might
 be not stable and buggy. For stable version, compile tagged version of the
-source code, e.g., v0.9.3.
+source code, e.g., v0.9.4.
 
 ### Latest version of the source code
 Having the dependencies, we can download the current github Monero version and compile it as follows:
@@ -52,7 +52,7 @@ Monero which can be found [here](https://github.com/monero-project/bitmonero/rel
 
 ### Stable tagged version
 The latest version of the source code can contain many bugs, as its not yet
-officially released. Thus, one can compile official tagged version, e.g., **0.9.3**:
+officially released. Thus, one can compile official tagged version, e.g., **0.9.4**:
 
 ```bash
 # download the latest bitmonero source code from github
@@ -65,8 +65,8 @@ cd bitmonero/
 git tag
 
 # select which version to checkout.
-# For example, to checkout tag v0.9.3
-git checkout -b v0.9.3
+# For example, to checkout tag v0.9.4
+git checkout -b v0.9.4
 
 # compile
 make # or make -j number_of_threads, e.g., make -j 2
@@ -133,7 +133,7 @@ This problem can be overcome using [rlwrap](https://github.com/hanslub42/rlwrap)
 
 ```bash
 # install rlwrap
-sudo apt-get install rlwrap
+sudo apt install rlwrap
 
 # download bitmonerod and simplewallet commands files
 wget -O ~/.bitmonero/monerocommands_bitmonerod.txt https://raw.githubusercontent.com/moneroexamples/compile-monero-09-on-xubuntu-16-04-beta-1/master/monerocommands_bitmonerod.txt
