@@ -30,16 +30,16 @@
 <p>Before proceeding with the compilation, the following packages are required:</p>
 
 <div class="highlight highlight-source-shell"><pre><span class="pl-c"># update Ubuntu's repository</span>
-sudo apt-get update
+sudo apt update
 
 <span class="pl-c">#install git to download latest Monero source code from github</span>
-sudo apt-get install git
+sudo apt install git
 
 <span class="pl-c"># install dependencies to be able to compile Monero</span>
-sudo apt-get install build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen
+sudo apt install build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen
 
 <span class="pl-c"># or git and all dependencies in one command</span>
-<span class="pl-c"># sudo apt-get install git build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen</span></pre></div>
+<span class="pl-c"># sudo apt install git build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen</span></pre></div>
 
 <h2>
 <a id="compilation" class="anchor" href="#compilation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Compilation</h2>
@@ -47,7 +47,7 @@ sudo apt-get install build-essential cmake libboost-all-dev miniupnpc libunbound
 <p>You can compile either latest version of the source code, or tagged version.
 For the bleeding edge features, use the latest version. However, this might
 be not stable and buggy. For stable version, compile tagged version of the
-source code, e.g., v0.9.3.</p>
+source code, e.g., v0.9.4.</p>
 
 <h3>
 <a id="latest-version-of-the-source-code" class="anchor" href="#latest-version-of-the-source-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Latest version of the source code</h3>
@@ -77,7 +77,7 @@ Monero which can be found <a href="https://github.com/monero-project/bitmonero/r
 <a id="stable-tagged-version" class="anchor" href="#stable-tagged-version" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Stable tagged version</h3>
 
 <p>The latest version of the source code can contain many bugs, as its not yet
-officially released. Thus, one can compile official tagged version, e.g., <strong>0.9.3</strong>:</p>
+officially released. Thus, one can compile official tagged version, e.g., <strong>0.9.4</strong>:</p>
 
 <div class="highlight highlight-source-shell"><pre><span class="pl-c"># download the latest bitmonero source code from github</span>
 git clone https://github.com/monero-project/bitmonero.git
@@ -89,8 +89,8 @@ git clone https://github.com/monero-project/bitmonero.git
 git tag
 
 <span class="pl-c"># select which version to checkout.</span>
-<span class="pl-c"># For example, to checkout tag v0.9.3</span>
-git checkout -b v0.9.3
+<span class="pl-c"># For example, to checkout tag v0.9.4</span>
+git checkout -b v0.9.4
 
 <span class="pl-c"># compile</span>
 make <span class="pl-c"># or make -j number_of_threads, e.g., make -j 2</span>
@@ -150,7 +150,7 @@ download the blockchain and synchronize itself with the Monero network. After th
 This problem can be overcome using <a href="https://github.com/hanslub42/rlwrap">rlwrap</a>.</p>
 
 <div class="highlight highlight-source-shell"><pre><span class="pl-c"># install rlwrap</span>
-sudo apt-get install rlwrap
+sudo apt install rlwrap
 
 <span class="pl-c"># download bitmonerod and simplewallet commands files</span>
 wget -O <span class="pl-k">~</span>/.bitmonero/monerocommands_bitmonerod.txt https://raw.githubusercontent.com/moneroexamples/compile-monero-09-on-xubuntu-16-04-beta-1/master/monerocommands_bitmonerod.txt
