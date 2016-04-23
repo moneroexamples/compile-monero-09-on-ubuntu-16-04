@@ -1,6 +1,6 @@
-# Compile Monero 0.9 on Ubuntu 16.04 x64 Final Beta
+# Compile Monero 0.9 on Ubuntu 16.04 x64
 
-The example shows how to compile the current github version of [Monero](https://getmonero.org/), as of 26 Mar 2015, on [Ubuntu 16.04 x64 Final Beta](https://lists.ubuntu.com/archives/ubuntu-announce/2016-March/000206.html).
+The example shows how to compile the current github version of [Monero](https://getmonero.org/), as of 23 Apr 2016, on [Ubuntu 16.04 x64](http://www.ubuntu.com/download/desktop).
 
 ## Dependencies
 Before proceeding with the compilation, the following packages are required:
@@ -258,18 +258,6 @@ This should results in the following file structure:
 │   ├── util.h
 │   └── varint.h
 # ... the rest not shown to save some space
-```
-
-## Shortcut
-The above steps (except `rlwrap` setup) where composed into one script: [`monero_ubuntu_compiler.sh`](https://github.com/moneroexamples/compile-monero-09-on-ubuntu-16-04/blob/master/monero_ubuntu_compiler.sh).
-
-The scripts requires root access and **deletes ./bitmonero, /opt/bitmonero and /opt/bitmonero-dev folders** if exist
-prior to installation. So use it with **caution**!!!
-
-To download and execute this script:
-
-```bash
-sudo su -c "wget https://raw.githubusercontent.com/moneroexamples/compile-monero-09-on-ubuntu-16-04/master/monero_ubuntu_compiler.sh && chmod +x monero_ubuntu_compiler.sh && ./monero_ubuntu_compiler.sh"
 ```
 
 ## Other examples
