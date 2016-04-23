@@ -21,14 +21,6 @@ sudo apt install build-essential cmake libboost-all-dev miniupnpc libunbound-dev
 
 ## Compilation
 
-You can compile either latest version of the source code, or tagged version.
-For the bleeding edge features, use the latest version. However, this might
-be not stable and buggy. For stable version, compile tagged version of the
-source code, e.g., v0.9.4.
-
-### Latest version of the source code
-Having the dependencies, we can download the current github Monero version and compile it as follows:
-
 ```bash
 # download the latest bitmonero source code from github
 git clone https://github.com/monero-project/bitmonero.git
@@ -36,47 +28,13 @@ git clone https://github.com/monero-project/bitmonero.git
 # go into bitmonero folder
 cd bitmonero/
 
-# compile
-make # or make -j number_of_threads, e.g., make -j 2
+# compile the release version.
+make release # or make -j number_of_threads, e.g., make -j 2
 
 # alternatively `make release` can be used instead of `make`. This compiles
 # the source code without compiling unique tests which is faster, and can
 # avid problems if there are compilation errors with compiling the tests
 ```
-
-Please not that this is a current version of Monero on github, **not the official and stable
-release**. Thus, as the development of Monero continues virtually on daily basis, sometimes
-things can break, including the compilation procedure provided.
-To avoid this, please use the source code and binary files of the official and stable release of
-Monero which can be found [here](https://github.com/monero-project/bitmonero/releases/latest).
-
-### Stable tagged version
-The latest version of the source code can contain many bugs, as its not yet
-officially released. Thus, one can compile official tagged version, e.g., **0.9.4**:
-
-```bash
-# download the latest bitmonero source code from github
-git clone https://github.com/monero-project/bitmonero.git
-
-# go into bitmonero folder
-cd bitmonero/
-
-# list all tags
-git tag
-
-# select which version to checkout.
-# For example, to checkout tag v0.9.4
-git checkout -b v0.9.4
-
-# compile
-make # or make -j number_of_threads, e.g., make -j 2
-
-# alternatively `make release` can be used instead of `make`. This compiles
-# the source code without compiling unique tests which is faster, and can
-# avid problems if there are compilation errors with compiling the tests
-```
-
-
 
 ## Installation
 After successful compilation, the Monero binaries should be located in `./build/release/bin` as shown below:
