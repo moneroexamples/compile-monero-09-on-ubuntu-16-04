@@ -20,9 +20,9 @@
 
     <section class="main-content">
       <h1>
-<a id="compile-monero-09-on-ubuntu-1604-x64-final-beta" class="anchor" href="#compile-monero-09-on-ubuntu-1604-x64-final-beta" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Compile Monero 0.9 on Ubuntu 16.04 x64 Final Beta</h1>
+<a id="compile-monero-09-on-ubuntu-1604-x64" class="anchor" href="#compile-monero-09-on-ubuntu-1604-x64" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Compile Monero 0.9 on Ubuntu 16.04 x64</h1>
 
-<p>The example shows how to compile the current github version of <a href="https://getmonero.org/">Monero</a>, as of 26 Mar 2015, on <a href="https://lists.ubuntu.com/archives/ubuntu-announce/2016-March/000206.html">Ubuntu 16.04 x64 Final Beta</a>.</p>
+<p>The example shows how to compile the current github version of <a href="https://getmonero.org/">Monero</a>, as of 23 Apr 2016, on <a href="http://www.ubuntu.com/download/desktop">Ubuntu 16.04 x64</a>.</p>
 
 <h2>
 <a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dependencies</h2>
@@ -270,18 +270,6 @@ sudo rsync -zarv --include=<span class="pl-s"><span class="pl-pds">"</span>*/<sp
 │   ├── util.h
 │   └── varint.h
 <span class="pl-c"># ... the rest not shown to save some space</span></pre></div>
-
-<h2>
-<a id="shortcut" class="anchor" href="#shortcut" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Shortcut</h2>
-
-<p>The above steps (except <code>rlwrap</code> setup) where composed into one script: <a href="https://github.com/moneroexamples/compile-monero-09-on-ubuntu-16-04/blob/master/monero_ubuntu_compiler.sh"><code>monero_ubuntu_compiler.sh</code></a>.</p>
-
-<p>The scripts requires root access and <strong>deletes ./bitmonero, /opt/bitmonero and /opt/bitmonero-dev folders</strong> if exist
-prior to installation. So use it with <strong>caution</strong>!!!</p>
-
-<p>To download and execute this script:</p>
-
-<div class="highlight highlight-source-shell"><pre>sudo su -c <span class="pl-s"><span class="pl-pds">"</span>wget https://raw.githubusercontent.com/moneroexamples/compile-monero-09-on-ubuntu-16-04/master/monero_ubuntu_compiler.sh &amp;&amp; chmod +x monero_ubuntu_compiler.sh &amp;&amp; ./monero_ubuntu_compiler.sh<span class="pl-pds">"</span></span></pre></div>
 
 <h2>
 <a id="other-examples" class="anchor" href="#other-examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Other examples</h2>
