@@ -44,56 +44,14 @@ sudo apt install build-essential cmake libboost-all-dev miniupnpc libunbound-dev
 <h2>
 <a id="compilation" class="anchor" href="#compilation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Compilation</h2>
 
-<p>You can compile either latest version of the source code, or tagged version.
-For the bleeding edge features, use the latest version. However, this might
-be not stable and buggy. For stable version, compile tagged version of the
-source code, e.g., v0.9.4.</p>
-
-<h3>
-<a id="latest-version-of-the-source-code" class="anchor" href="#latest-version-of-the-source-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Latest version of the source code</h3>
-
-<p>Having the dependencies, we can download the current github Monero version and compile it as follows:</p>
-
 <div class="highlight highlight-source-shell"><pre><span class="pl-c"># download the latest bitmonero source code from github</span>
 git clone https://github.com/monero-project/bitmonero.git
 
 <span class="pl-c"># go into bitmonero folder</span>
 <span class="pl-c1">cd</span> bitmonero/
 
-<span class="pl-c"># compile</span>
-make <span class="pl-c"># or make -j number_of_threads, e.g., make -j 2</span>
-
-<span class="pl-c"># alternatively `make release` can be used instead of `make`. This compiles</span>
-<span class="pl-c"># the source code without compiling unique tests which is faster, and can</span>
-<span class="pl-c"># avid problems if there are compilation errors with compiling the tests</span></pre></div>
-
-<p>Please not that this is a current version of Monero on github, <strong>not the official and stable
-release</strong>. Thus, as the development of Monero continues virtually on daily basis, sometimes
-things can break, including the compilation procedure provided.
-To avoid this, please use the source code and binary files of the official and stable release of
-Monero which can be found <a href="https://github.com/monero-project/bitmonero/releases/latest">here</a>.</p>
-
-<h3>
-<a id="stable-tagged-version" class="anchor" href="#stable-tagged-version" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Stable tagged version</h3>
-
-<p>The latest version of the source code can contain many bugs, as its not yet
-officially released. Thus, one can compile official tagged version, e.g., <strong>0.9.4</strong>:</p>
-
-<div class="highlight highlight-source-shell"><pre><span class="pl-c"># download the latest bitmonero source code from github</span>
-git clone https://github.com/monero-project/bitmonero.git
-
-<span class="pl-c"># go into bitmonero folder</span>
-<span class="pl-c1">cd</span> bitmonero/
-
-<span class="pl-c"># list all tags</span>
-git tag
-
-<span class="pl-c"># select which version to checkout.</span>
-<span class="pl-c"># For example, to checkout tag v0.9.4</span>
-git checkout -b v0.9.4
-
-<span class="pl-c"># compile</span>
-make <span class="pl-c"># or make -j number_of_threads, e.g., make -j 2</span>
+<span class="pl-c"># compile the release version.</span>
+make release <span class="pl-c"># or make -j number_of_threads, e.g., make -j 2</span>
 
 <span class="pl-c"># alternatively `make release` can be used instead of `make`. This compiles</span>
 <span class="pl-c"># the source code without compiling unique tests which is faster, and can</span>
