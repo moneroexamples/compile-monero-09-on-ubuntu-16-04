@@ -31,7 +31,7 @@ cd bitmonero/
 
 # apply patch for using Onion Blockchain Explorer (optional)
 # https://github.com/moneroexamples/onion-monero-blockchain-explorer
-# wget -q -O https://raw.githubusercontent.com/moneroexamples/compile-monero-09-on-ubuntu-16-04/master/res/tx_blob_to_tx_info.patch | git apply -v -
+# curl https://raw.githubusercontent.com/moneroexamples/compile-monero-09-on-ubuntu-16-04/master/res/tx_blob_to_tx_info.patch | git apply -v -
 #
 
 # compile the release version.
