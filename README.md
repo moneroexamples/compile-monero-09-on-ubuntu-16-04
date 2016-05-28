@@ -28,6 +28,9 @@ git clone https://github.com/monero-project/bitmonero.git
 # go into bitmonero folder
 cd bitmonero/
 
+# apply patch for using Onion Blockchain Explorer (optional)
+
+
 # compile the release version.
 make release # or make -j number_of_threads, e.g., make -j 2
 
