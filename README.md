@@ -13,10 +13,10 @@ sudo apt update
 sudo apt install git
 
 # install dependencies to be able to compile Monero
-sudo apt install build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen
+sudo apt install build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen libunwind8-dev
 
 # or git and all dependencies in one command
-# sudo apt install git build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen
+# sudo apt install git build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen libunwind8-dev
 ```
 
 ## Compilation
