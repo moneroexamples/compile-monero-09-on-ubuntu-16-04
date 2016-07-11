@@ -1,6 +1,6 @@
 # Compile Monero 0.9 on Ubuntu 16.04 x64
 
-The example shows how to compile the current github version of [Monero](https://getmonero.org/), as of 23 Apr 2016, on [Ubuntu 16.04 x64](http://www.ubuntu.com/download/desktop).
+The example shows how to compile the current github version of [Monero](https://getmonero.org/), as of 10 Jul 2016, on [Ubuntu 16.04 x64](http://www.ubuntu.com/download/desktop).
 
 ## Dependencies
 Before proceeding with the compilation, the following packages are required:
@@ -35,7 +35,7 @@ cd bitmonero/
 #
 
 # compile the release version.
-make release # or make -j number_of_threads, e.g., make -j 2
+make # or make -j number_of_threads, e.g., make -j 2
 
 # alternatively `make release` can be used instead of `make`. This compiles
 # the source code without compiling unique tests which is faster, and can
