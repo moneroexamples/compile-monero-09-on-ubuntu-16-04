@@ -22,7 +22,7 @@
       <h1>
 <a id="compile-monero-09-on-ubuntu-1604-x64" class="anchor" href="#compile-monero-09-on-ubuntu-1604-x64" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Compile Monero 0.9 on Ubuntu 16.04 x64</h1>
 
-<p>The example shows how to compile the current github version of <a href="https://getmonero.org/">Monero</a>, as of 23 Apr 2016, on <a href="http://www.ubuntu.com/download/desktop">Ubuntu 16.04 x64</a>.</p>
+<p>The example shows how to compile the current github version of <a href="https://getmonero.org/">Monero</a>, as of 10 Jul 2016, on <a href="http://www.ubuntu.com/download/desktop">Ubuntu 16.04 x64</a>.</p>
 
 <h2>
 <a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dependencies</h2>
@@ -36,10 +36,10 @@ sudo apt update
 sudo apt install git
 
 <span class="pl-c"># install dependencies to be able to compile Monero</span>
-sudo apt install build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen
+sudo apt install build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen libunwind8-dev pkg-config
 
 <span class="pl-c"># or git and all dependencies in one command</span>
-<span class="pl-c"># sudo apt install git build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen</span></pre></div>
+<span class="pl-c"># sudo apt install git build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen libunwind8-dev pkg-config</span></pre></div>
 
 <h2>
 <a id="compilation" class="anchor" href="#compilation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Compilation</h2>
@@ -50,8 +50,13 @@ git clone https://github.com/monero-project/bitmonero.git
 <span class="pl-c"># go into bitmonero folder</span>
 <span class="pl-c1">cd</span> bitmonero/
 
+<span class="pl-c"># apply patch for using Onion Blockchain Explorer (optional)</span>
+<span class="pl-c"># https://github.com/moneroexamples/onion-monero-blockchain-explorer</span>
+<span class="pl-c"># curl https://raw.githubusercontent.com/moneroexamples/compile-monero-09-on-ubuntu-16-04/master/res/tx_blob_to_tx_info.patch | git apply -v -</span>
+<span class="pl-c">#</span>
+
 <span class="pl-c"># compile the release version.</span>
-make release <span class="pl-c"># or make -j number_of_threads, e.g., make -j 2</span>
+make <span class="pl-c"># or make -j number_of_threads, e.g., make -j 2</span>
 
 <span class="pl-c"># alternatively `make release` can be used instead of `make`. This compiles</span>
 <span class="pl-c"># the source code without compiling unique tests which is faster, and can</span>
@@ -115,8 +120,8 @@ wget -O <span class="pl-k">~</span>/.bitmonero/monerocommands_bitmonerod.txt htt
 wget -O <span class="pl-k">~</span>/.bitmonero/monerocommands_simplewallet.txt https://raw.githubusercontent.com/moneroexamples/compile-monero-09-on-xubuntu-16-04-beta-1/master/monerocommands_simplewallet.txt
 
 <span class="pl-c"># add aliases to .bashrc</span>
-<span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>alias moneronode='rlwrap -f ~/.bitmonero/monerocommands_simplewallet.txt /opt/bitmonero/bitmonerod'<span class="pl-pds">"</span></span> <span class="pl-k">&gt;&gt;</span> <span class="pl-k">~</span>/.bashrc
-<span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>alias monerowallet='rlwrap -f ~/.bitmonero/monerocommands_bitmonerod.txt /opt/bitmonero/simplewallet'<span class="pl-pds">"</span></span> <span class="pl-k">&gt;&gt;</span> <span class="pl-k">~</span>/.bashrc
+<span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>alias moneronode='rlwrap -f ~/.bitmonero/monerocommands_bitmonerod.txt /opt/bitmonero/bitmonerod'<span class="pl-pds">"</span></span> <span class="pl-k">&gt;&gt;</span> <span class="pl-k">~</span>/.bashrc
+<span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>alias monerowallet='rlwrap -f ~/.bitmonero/monerocommands_simplewallet.txt /opt/bitmonero/simplewallet'<span class="pl-pds">"</span></span> <span class="pl-k">&gt;&gt;</span> <span class="pl-k">~</span>/.bashrc
 
 <span class="pl-c"># reload .bashrc</span>
 <span class="pl-c1">source</span> <span class="pl-k">~</span>/.bashrc</pre></div>
