@@ -104,8 +104,8 @@ wget -O ~/.bitmonero/monerocommands_bitmonerod.txt https://raw.githubusercontent
 wget -O ~/.bitmonero/monerocommands_simplewallet.txt https://raw.githubusercontent.com/moneroexamples/compile-monero-09-on-xubuntu-16-04-beta-1/master/monerocommands_simplewallet.txt
 
 # add aliases to .bashrc
-echo "alias moneronode='rlwrap -f ~/.bitmonero/monerocommands_simplewallet.txt /opt/bitmonero/bitmonerod'" >> ~/.bashrc
-echo "alias monerowallet='rlwrap -f ~/.bitmonero/monerocommands_bitmonerod.txt /opt/bitmonero/simplewallet'" >> ~/.bashrc
+echo "alias moneronode='rlwrap -f ~/.bitmonero/monerocommands_bitmonerod.txt /opt/bitmonero/bitmonerod'" >> ~/.bashrc
+echo "alias monerowallet='rlwrap -f ~/.bitmonero/monerocommands_simplewallet.txt /opt/bitmonero/simplewallet'" >> ~/.bashrc
 
 # reload .bashrc
 source ~/.bashrc
