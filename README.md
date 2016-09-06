@@ -1,6 +1,6 @@
 # Compile Monero 0.9 on Ubuntu 16.04 x64
 
-The example shows how to compile the current github version of [Monero](https://getmonero.org/), as of 10 Jul 2016, on [Ubuntu 16.04 x64](http://www.ubuntu.com/download/desktop).
+The example shows how to compile the current github version of [Monero](https://getmonero.org/), as of 06 Sep 2016, on [Ubuntu 16.04 x64](http://www.ubuntu.com/download/desktop).
 
 ## Dependencies
 Before proceeding with the compilation, the following packages are required:
@@ -23,10 +23,10 @@ sudo apt install build-essential cmake libboost-all-dev miniupnpc libunbound-dev
 
 
 ```bash
-# download the latest bitmonero source code from github
+# download the latest Monero source code from github
 git clone https://github.com/monero-project/monero
 
-# go into bitmonero folder
+# go into monero folder
 cd monero/
 
 # apply patch for using Onion Blockchain Explorer (optional)
@@ -58,12 +58,12 @@ After successful compilation, the Monero binaries should be located in `./build/
 └── simplewallet
 ```
 
-I usually move the binaries into `/opt/bitmonero/` folder. This can be done as follows:
+I usually move the binaries into `/opt/monero/` folder. This can be done as follows:
 
 ```bash
 # optional
-sudo mkdir -p /opt/bitmonero
-sudo mv -v ./build/release/bin/* /opt/bitmonero/
+sudo mkdir -p /opt/monero
+sudo mv -v ./build/release/bin/* /opt/monero/
 ```
 
 This should result in:
@@ -80,32 +80,32 @@ This should result in:
 └── simplewallet
 ```
 
-Now we can start the Monero daemon, i.e., `bitmonerod`, and let it
+Now we can start the Monero daemon, i.e., `monerod`, and let it
 download the blockchain and synchronize itself with the Monero network. After that, you can run your the `simplewallet`.
 
 ```bash
 # launch the Monero daemon and let it synchronize with the Monero network
-/opt/bitmonero/bitmonerod
+/opt/monero/monerod
 
 # launch the Monero wallet
-/opt/bitmonero/simplewallet
+/opt/monero/simplewallet
 ```
 
 ## Useful aliases (with rlwrap)
-`bitmonerod` and `simplewallet` do not have tab-compliton nor history.
+`monerod` and `simplewallet` do not have tab-compliton nor history.
 This problem can be overcome using [rlwrap](https://github.com/hanslub42/rlwrap).
 
 ```bash
 # install rlwrap
 sudo apt install rlwrap
 
-# download bitmonerod and simplewallet commands files
+# download monerod and simplewallet commands files
 wget -O ~/.bitmonero/monerocommands_bitmonerod.txt https://raw.githubusercontent.com/moneroexamples/compile-monero-09-on-xubuntu-16-04-beta-1/master/monerocommands_bitmonerod.txt
 wget -O ~/.bitmonero/monerocommands_simplewallet.txt https://raw.githubusercontent.com/moneroexamples/compile-monero-09-on-xubuntu-16-04-beta-1/master/monerocommands_simplewallet.txt
 
 # add aliases to .bashrc
-echo "alias moneronode='rlwrap -f ~/.bitmonero/monerocommands_bitmonerod.txt /opt/bitmonero/bitmonerod'" >> ~/.bashrc
-echo "alias monerowallet='rlwrap -f ~/.bitmonero/monerocommands_simplewallet.txt /opt/bitmonero/simplewallet'" >> ~/.bashrc
+echo "alias moneronode='rlwrap -f ~/.bitmonero/monerocommands_bitmonerod.txt /opt/monero/monerod'" >> ~/.bashrc
+echo "alias monerowallet='rlwrap -f ~/.bitmonero/monerocommands_simplewallet.txt /opt/monero/simplewallet'" >> ~/.bashrc
 
 # reload .bashrc
 source ~/.bashrc
@@ -133,17 +133,17 @@ When the compilation finishes, a number of static Monero libraries
 should be generated. We will need them to link against in our C++11 programs.
 
 Since they are spread out over different subfolders of the `./build/` folder, it is easier to just copy them into one folder. I assume that
- `/opt/bitmonero-dev/libs` is the folder where they are going to be copied to.
+ `/opt/monero-dev/libs` is the folder where they are going to be copied to.
 
 ```bash
 # create the folder
-sudo mkdir -p /opt/bitmonero-dev/libs
+sudo mkdir -p /opt/monero-dev/libs
 
 # find the static libraries files (i.e., those with extension of *.a)
-# and copy them to /opt/bitmonero-dev/libs
-# assuming you are still in bitmonero/ folder which you downloaded from
+# and copy them to /opt/monero-dev/libs
+# assuming you are still in monero/ folder which you downloaded from
 # github
-sudo find ./build/ -name '*.a' -exec cp -v {} /opt/bitmonero-dev/libs  \;
+sudo find ./build/ -name '*.a' -exec cp -v {} /opt/monero-dev/libs  \;
 ```
 
  This should results in the following file structure:
@@ -172,18 +172,18 @@ sudo find ./build/ -name '*.a' -exec cp -v {} /opt/bitmonero-dev/libs  \;
 ### Monero headers
 
 Now we need to get Monero headers, as this is our interface to the
-Monero libraries. Folder `/opt/bitmonero-dev/headers` is assumed
+Monero libraries. Folder `/opt/monero-dev/headers` is assumed
 to hold the headers.
 
 ```bash
 # create the folder
-sudo mkdir -p /opt/bitmonero-dev/headers
+sudo mkdir -p /opt/monero-dev/headers
 
 # find the header files (i.e., those with extension of *.h)
-# and copy them to /opt/bitmonero-dev/headers.
+# and copy them to /opt/monero-dev/headers.
 # but this time the structure of directories is important
 # so rsync is used to find and copy the headers files
-sudo rsync -zarv --include="*/" --include="*.h" --exclude="*" --prune-empty-dirs ./ /opt/bitmonero-dev/headers
+sudo rsync -zarv --include="*/" --include="*.h" --exclude="*" --prune-empty-dirs ./ /opt/monero-dev/headers
 ```
 
 This should results in the following file structure:
@@ -191,7 +191,7 @@ This should results in the following file structure:
 ```bash
 # only src/ folder with up to 3 level nesting is shown
 
-/opt/bitmonero-dev/headers/src/
+/opt/monero-dev/headers/src/
 ├── blockchain_db
 │   ├── berkeleydb
 │   │   └── db_bdb.h
@@ -227,6 +227,7 @@ This should results in the following file structure:
 
 
 ## Other examples
+
 Other examples can be found on  [github](https://github.com/moneroexamples?tab=repositories).
 Please know that some of the examples/repositories are not
 finished and may not work as intended.
