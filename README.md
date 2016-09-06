@@ -24,10 +24,10 @@ sudo apt install build-essential cmake libboost-all-dev miniupnpc libunbound-dev
 
 ```bash
 # download the latest bitmonero source code from github
-git clone https://github.com/monero-project/bitmonero.git
+git clone https://github.com/monero-project/monero
 
 # go into bitmonero folder
-cd bitmonero/
+cd monero/
 
 # apply patch for using Onion Blockchain Explorer (optional)
 # https://github.com/moneroexamples/onion-monero-blockchain-explorer
@@ -223,6 +223,8 @@ This should results in the following file structure:
 │   └── varint.h
 # ... the rest not shown to save some space
 ```
+
+
 
 ## Other examples
 Other examples can be found on  [github](https://github.com/moneroexamples?tab=repositories).
