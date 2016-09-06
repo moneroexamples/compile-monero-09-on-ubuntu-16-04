@@ -80,8 +80,9 @@ This problem can be overcome using [rlwrap](https://github.com/hanslub42/rlwrap)
 sudo apt install rlwrap
 
 # download monerod and monero-wallet-cli commands files
-wget -O ~/.bitmonero/monerocommands_bitmonerod.txt https://raw.githubusercontent.com/moneroexamples/compile-monero-09-on-xubuntu-16-04-beta-1/master/monerocommands_bitmonerod.txt
-wget -O ~/.bitmonero/monerocommands_simplewallet.txt https://raw.githubusercontent.com/moneroexamples/compile-monero-09-on-xubuntu-16-04-beta-1/master/monerocommands_simplewallet.txt
+wget -O ~/.bitmonero/monerocommands_bitmonerod.txt https://raw.githubusercontent.com/moneroexamples/compile-monero-09-on-ubuntu-16-04/master/monerocommands_bitmonerod.txt
+
+wget -O ~/.bitmonero/monerocommands_simplewallet.txt https://raw.githubusercontent.com/moneroexamples/compile-monero-09-on-ubuntu-16-04/master/monerocommands_simplewallet.txt
 
 # add aliases to .bashrc
 echo "alias moneronode='rlwrap -f ~/.bitmonero/monerocommands_bitmonerod.txt /opt/monero/monerod'" >> ~/.bashrc
