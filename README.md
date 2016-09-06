@@ -43,22 +43,7 @@ make # or make -j number_of_threads, e.g., make -j 2
 ```
 
 ## Installation
-After successful compilation, the Monero binaries should be located in `./build/release/bin` as shown below:
-
-```bash
-./build/release/bin/
-├── bitmonerod
-├── blockchain_converter
-├── blockchain_dump
-├── blockchain_export
-├── blockchain_import
-├── cn_deserialize
-├── connectivity_tool
-├── simpleminer
-└── simplewallet
-```
-
-I usually move the binaries into `/opt/monero/` folder. This can be done as follows:
+After successful compilation, the Monero binaries should be located in `./build/release/bin`. I usually move the binaries into `/opt/monero/` folder. This can be done as follows:
 
 ```bash
 # optional
@@ -68,44 +53,39 @@ sudo mv -v ./build/release/bin/* /opt/monero/
 
 This should result in:
 ```bash
-/opt/bitmonero
-├── bitmonerod
-├── blockchain_converter
-├── blockchain_dump
-├── blockchain_export
-├── blockchain_import
-├── cn_deserialize
-├── connectivity_tool
-├── simpleminer
-└── simplewallet
+/opt/monero/
+├── monero-blockchain-export
+├── monero-blockchain-import
+├── monerod
+└── monero-wallet-cli
 ```
 
 Now we can start the Monero daemon, i.e., `monerod`, and let it
-download the blockchain and synchronize itself with the Monero network. After that, you can run your the `simplewallet`.
+download the blockchain and synchronize itself with the Monero network. After that, you can run your the `monero-wallet-cli`.
 
 ```bash
 # launch the Monero daemon and let it synchronize with the Monero network
 /opt/monero/monerod
 
 # launch the Monero wallet
-/opt/monero/simplewallet
+/opt/monero/monero-wallet-cli
 ```
 
 ## Useful aliases (with rlwrap)
-`monerod` and `simplewallet` do not have tab-compliton nor history.
+`monerod` and `monero-wallet-cli` do not have tab-compliton nor history.
 This problem can be overcome using [rlwrap](https://github.com/hanslub42/rlwrap).
 
 ```bash
 # install rlwrap
 sudo apt install rlwrap
 
-# download monerod and simplewallet commands files
+# download monerod and monero-wallet-cli commands files
 wget -O ~/.bitmonero/monerocommands_bitmonerod.txt https://raw.githubusercontent.com/moneroexamples/compile-monero-09-on-xubuntu-16-04-beta-1/master/monerocommands_bitmonerod.txt
 wget -O ~/.bitmonero/monerocommands_simplewallet.txt https://raw.githubusercontent.com/moneroexamples/compile-monero-09-on-xubuntu-16-04-beta-1/master/monerocommands_simplewallet.txt
 
 # add aliases to .bashrc
 echo "alias moneronode='rlwrap -f ~/.bitmonero/monerocommands_bitmonerod.txt /opt/monero/monerod'" >> ~/.bashrc
-echo "alias monerowallet='rlwrap -f ~/.bitmonero/monerocommands_simplewallet.txt /opt/monero/simplewallet'" >> ~/.bashrc
+echo "alias monerowallet='rlwrap -f ~/.bitmonero/monerocommands_simplewallet.txt /opt/monero/monero-wallet-cli'" >> ~/.bashrc
 
 # reload .bashrc
 source ~/.bashrc
@@ -121,6 +101,7 @@ tab-complition and history for the monero programs.
 
 
 ## Monero C++11 development (optional)
+
 If you want to develop your own C++11 programs on top of Monero 0.9,
 Monero's static libraries and headers will be needed. Below is shown
 how they can be setup for use to write your own C++11 programs based
@@ -149,24 +130,24 @@ sudo find ./build/ -name '*.a' -exec cp -v {} /opt/monero-dev/libs  \;
  This should results in the following file structure:
 
  ```bash
-/opt/bitmonero-dev/
-└── libs
-    ├── libblockchain_db.a
-    ├── libblocks.a
-    ├── libcommon.a
-    ├── libcrypto.a
-    ├── libcryptonote_core.a
-    ├── libcryptonote_protocol.a
-    ├── libdaemonizer.a
-    ├── libgtest.a
-    ├── libgtest_main.a
-    ├── liblmdb.a
-    ├── libminiupnpc.a
-    ├── libmnemonics.a
-    ├── libotshell_utils.a
-    ├── libp2p.a
-    ├── librpc.a
-    └── libwallet.a
+/opt/monero-dev/libs/
+├── libblockchain_db.a
+├── libblocks.a
+├── libcommon.a
+├── libcrypto.a
+├── libcryptonote_core.a
+├── libcryptonote_protocol.a
+├── libdaemonizer.a
+├── libgtest.a
+├── libgtest_main.a
+├── liblmdb.a
+├── libminiupnpc.a
+├── libmnemonics.a
+├── libotshell_utils.a
+├── libp2p.a
+├── libringct.a
+├── librpc.a
+└── libwallet.a
 ```
 
 ### Monero headers
@@ -189,41 +170,22 @@ sudo rsync -zarv --include="*/" --include="*.h" --exclude="*" --prune-empty-dirs
 This should results in the following file structure:
 
 ```bash
-# only src/ folder with up to 3 level nesting is shown
-
-/opt/monero-dev/headers/src/
-├── blockchain_db
-│   ├── berkeleydb
-│   │   └── db_bdb.h
-│   ├── blockchain_db.h
-│   ├── db_types.h
-│   └── lmdb
-│       └── db_lmdb.h
-├── blockchain_utilities
-│   ├── blockchain_utilities.h
-│   ├── blocksdat_file.h
-│   ├── bootstrap_file.h
-│   ├── bootstrap_serialization.h
-│   └── fake_core.h
-├── blocks
-│   └── blocks.h
-├── common
-│   ├── base58.h
-│   ├── boost_serialization_helper.h
-│   ├── command_line.h
-│   ├── dns_utils.h
-│   ├── http_connection.h
-│   ├── i18n.h
-│   ├── int-util.h
-│   ├── pod-class.h
-│   ├── rpc_client.h
-│   ├── scoped_message_writer.h
-│   ├── unordered_containers_boost_serialization.h
-│   ├── util.h
-│   └── varint.h
-# ... the rest not shown to save some space
+# ... only part shown to save some space
+├── src
+│   ├── blockchain_db
+│   │   ├── berkeleydb
+│   │   ├── blockchain_db.h
+│   │   ├── db_types.h
+│   │   └── lmdb
+│   ├── blockchain_utilities
+│   │   ├── blockchain_utilities.h
+│   │   ├── blocksdat_file.h
+│   │   ├── bootstrap_file.h
+│   │   ├── bootstrap_serialization.h
+│   │   └── fake_core.h
+│   ├── blocks
+│   │   └── blocks.h
 ```
-
 
 
 ## Other examples

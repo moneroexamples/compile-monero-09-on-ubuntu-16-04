@@ -12,6 +12,7 @@ limit
 limit_down
 limit_up
 out_peers
+output_histogram
 print_bc
 print_block
 print_cn
