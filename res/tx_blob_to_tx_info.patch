@@ -1,6 +1,6 @@
-From 9511b01a709547e95b8043c7714c10723b3ae6c6 Mon Sep 17 00:00:00 2001
+From 5aea2aa0b54fa578a1608f097f140926b8badb13 Mon Sep 17 00:00:00 2001
 From: moneroexamples <moneroexamples@tuta.io>
-Date: Sat, 28 May 2016 09:20:10 +0800
+Date: Fri, 16 Sep 2016 08:56:56 +0800
 Subject: [PATCH] tx_blob added to tx_info structure
 
 ---
@@ -9,10 +9,10 @@ Subject: [PATCH] tx_blob added to tx_info structure
  2 files changed, 3 insertions(+)
 
 diff --git a/src/cryptonote_core/tx_pool.cpp b/src/cryptonote_core/tx_pool.cpp
-index 3d5ab86..dc0e0a6 100644
+index 46fab4d..91c6a4d 100644
 --- a/src/cryptonote_core/tx_pool.cpp
 +++ b/src/cryptonote_core/tx_pool.cpp
-@@ -418,6 +418,7 @@ namespace cryptonote
+@@ -420,6 +420,7 @@ namespace cryptonote
        txi.last_failed_height = txd.last_failed_height;
        txi.last_failed_id_hash = epee::string_tools::pod_to_hex(txd.last_failed_id);
        txi.receive_time = txd.receive_time;
@@ -21,10 +21,10 @@ index 3d5ab86..dc0e0a6 100644
      }
  
 diff --git a/src/rpc/core_rpc_server_commands_defs.h b/src/rpc/core_rpc_server_commands_defs.h
-index 392c750..c904bef 100644
+index 8cba539..6a7e4fb 100644
 --- a/src/rpc/core_rpc_server_commands_defs.h
 +++ b/src/rpc/core_rpc_server_commands_defs.h
-@@ -753,6 +753,7 @@ namespace cryptonote
+@@ -855,6 +855,7 @@ namespace cryptonote
      uint64_t last_failed_height;
      std::string last_failed_id_hash;
      uint64_t receive_time;
@@ -32,7 +32,7 @@ index 392c750..c904bef 100644
  
      BEGIN_KV_SERIALIZE_MAP()
        KV_SERIALIZE(id_hash)
-@@ -765,6 +766,7 @@ namespace cryptonote
+@@ -867,6 +868,7 @@ namespace cryptonote
        KV_SERIALIZE(last_failed_height)
        KV_SERIALIZE(last_failed_id_hash)
        KV_SERIALIZE(receive_time)
@@ -41,5 +41,5 @@ index 392c750..c904bef 100644
    };
  
 -- 
-2.8.3
+2.7.4
 
