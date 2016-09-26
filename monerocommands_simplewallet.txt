@@ -22,6 +22,8 @@ set_log
 set_tx_note
 show_transfers
 sign
+sign_transfer
+submit_transfer
 spendkey
 start_mining
 status
