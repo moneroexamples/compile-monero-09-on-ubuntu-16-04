@@ -34,9 +34,6 @@ cd monero/
 # curl https://raw.githubusercontent.com/moneroexamples/compile-monero-09-on-ubuntu-16-04/master/res/tx_blob_to_tx_info.patch | git apply -v -
 #
 
-# apply patch for cold wallet signing for use in tx pusher (optional)
-# curl https://patch-diff.githubusercontent.com/raw/monero-project/monero/pull/1140.patch | git apply -v -
-
 # compile the release version.
 make # or make -j number_of_threads, e.g., make -j 2
 
