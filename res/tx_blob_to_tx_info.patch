@@ -1,6 +1,6 @@
-From 5aea2aa0b54fa578a1608f097f140926b8badb13 Mon Sep 17 00:00:00 2001
+From 04a58875341562ce82981181ea2476a1e30e22f8 Mon Sep 17 00:00:00 2001
 From: moneroexamples <moneroexamples@tuta.io>
-Date: Fri, 16 Sep 2016 08:56:56 +0800
+Date: Wed, 26 Oct 2016 07:20:25 +0800
 Subject: [PATCH] tx_blob added to tx_info structure
 
 ---
@@ -9,37 +9,37 @@ Subject: [PATCH] tx_blob added to tx_info structure
  2 files changed, 3 insertions(+)
 
 diff --git a/src/cryptonote_core/tx_pool.cpp b/src/cryptonote_core/tx_pool.cpp
-index 46fab4d..91c6a4d 100644
+index dba05a5..6aca61a 100644
 --- a/src/cryptonote_core/tx_pool.cpp
 +++ b/src/cryptonote_core/tx_pool.cpp
-@@ -420,6 +420,7 @@ namespace cryptonote
-       txi.last_failed_height = txd.last_failed_height;
-       txi.last_failed_id_hash = epee::string_tools::pod_to_hex(txd.last_failed_id);
+@@ -427,6 +427,7 @@ namespace cryptonote
        txi.receive_time = txd.receive_time;
+       txi.relayed = txd.relayed;
+       txi.last_relayed_time = txd.last_relayed_time;
 +      txi.tx_blob = tx_to_blob(txd.tx);
        tx_infos.push_back(txi);
      }
  
 diff --git a/src/rpc/core_rpc_server_commands_defs.h b/src/rpc/core_rpc_server_commands_defs.h
-index 8cba539..6a7e4fb 100644
+index 85895a7..00292e2 100644
 --- a/src/rpc/core_rpc_server_commands_defs.h
 +++ b/src/rpc/core_rpc_server_commands_defs.h
-@@ -855,6 +855,7 @@ namespace cryptonote
-     uint64_t last_failed_height;
-     std::string last_failed_id_hash;
+@@ -859,6 +859,7 @@ namespace cryptonote
      uint64_t receive_time;
+     bool relayed;
+     uint64_t last_relayed_time;
 +    blobdata tx_blob;
  
      BEGIN_KV_SERIALIZE_MAP()
        KV_SERIALIZE(id_hash)
-@@ -867,6 +868,7 @@ namespace cryptonote
-       KV_SERIALIZE(last_failed_height)
-       KV_SERIALIZE(last_failed_id_hash)
+@@ -873,6 +874,7 @@ namespace cryptonote
        KV_SERIALIZE(receive_time)
+       KV_SERIALIZE(relayed)
+       KV_SERIALIZE(last_failed_id_hash)
 +      KV_SERIALIZE(tx_blob)
      END_KV_SERIALIZE_MAP()
    };
  
 -- 
-2.7.4
+2.9.3
 
