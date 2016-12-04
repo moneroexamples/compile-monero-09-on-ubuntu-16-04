@@ -2,7 +2,6 @@ ban
 bans
 diff
 exit
-fast_exit
 flush_txpool
 hard_fork_info
 help
@@ -16,6 +15,7 @@ output_histogram
 print_bc
 print_block
 print_cn
+print_coinbase_tx_sum
 print_height
 print_pl
 print_pool
