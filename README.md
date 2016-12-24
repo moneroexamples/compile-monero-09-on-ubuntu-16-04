@@ -164,7 +164,7 @@ sudo mkdir -p /opt/monero-dev/headers
 # and copy them to /opt/monero-dev/headers.
 # but this time the structure of directories is important
 # so rsync is used to find and copy the headers files
-sudo rsync -zarv --include="*/" --include="*.h" --exclude="*" --prune-empty-dirs ./ /opt/monero-dev/headers
+sudo rsync -zarv --include="*/" --include="*.h" --include="*.hpp" --exclude="*" --prune-empty-dirs ./ /opt/monero-dev/headers
 ```
 
 This should results in the following file structure:
