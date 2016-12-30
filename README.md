@@ -186,7 +186,36 @@ This should results in the following file structure:
 │   ├── blocks
 │   │   └── blocks.h
 ```
+### Compilation and setup of libraries and header files in one command.
 
+Add this to your `.bashrc`:
+
+```bash
+compilemonero() {
+
+	local no_threads=1;
+
+	[[ -n $1 ]] && no_threads=$1;
+
+	echo "Compiling with $no_threads threads";
+
+	make -j $no_threads;
+	sudo mv -v ./build/release/bin/* /opt/monero/;
+	sudo rm -rvf /opt/monero-dev/libs;
+	sudo mkdir -p /opt/monero-dev/libs;
+	sudo find ./build/ -name '*.a' -exec cp -v {} /opt/monero-dev/libs  \;
+	sudo rm -rvf  -p /opt/monero-dev/headers
+	sudo rsync -zarv --include="*/" --include="*.h" --include="*.hpp" --exclude="*" --prune-empty-dirs ./ /opt/monero-dev/headers;
+}
+```
+
+and then, for example:
+
+```bash
+source .bashrc
+cd monero
+compilemonero 2 
+```
 
 ## Other examples
 
