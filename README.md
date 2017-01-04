@@ -200,6 +200,7 @@ compilemonero() {
 	echo "Compiling with $no_threads threads";
 
 	make -j $no_threads;
+	sudo mkdir -p /opt/monero/
 	sudo mv -v ./build/release/bin/* /opt/monero/;
 	sudo rm -rvf /opt/monero-dev/libs;
 	sudo mkdir -p /opt/monero-dev/libs;
