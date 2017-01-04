@@ -1,0 +1,8 @@
+title: Monero Examples
+description: compile-monero-09-on-ubuntu-16-04
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions
