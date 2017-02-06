@@ -233,7 +233,7 @@ myapply() {
 And then, inside Monero folder, execte it as follows:
 
 ```bash
-myapply(1689)
+myapply 1689
 ```
 where 1689 is example pull request number.
 
@@ -247,7 +247,3 @@ finished and may not work as intended.
 
 Constructive criticism, code and website edits are always good. They can be made through github.
 
-Some Monero are also welcome:
-```
-48daf1rG3hE1Txapcsxh6WXNe9MLNKtu7W7tKTivtSoVLHErYzvdcpea2nSTgGkz66RFP4GKVAsTV14v6G3oddBTHfxP6tU
-```
