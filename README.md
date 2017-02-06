@@ -218,6 +218,25 @@ cd monero
 compilemonero 2 
 ```
 
+### Applying Monero pull requests
+
+Often when working with development version of Monero, it is necessery to patch the source code
+with [pull requests](https://github.com/monero-project/monero/pulls), for testing or to quickly fix something without waiting for when they get
+officially marged into master brunch. Doing this all the time manually can be time consuming. However, the following function can simply it. Just add it to your `.bashrc`
+
+```bash
+myapply() {
+	curl -L https://github.com/monero-project/monero/pull/$1.patch | git apply -v -
+}
+```
+
+And then, inside Monero folder, execte it as follows:
+
+```bash
+myapply(1689)
+```
+where 1689 is example pull request number.
+
 ## Other examples
 
 Other examples can be found on  [github](https://github.com/moneroexamples?tab=repositories).
