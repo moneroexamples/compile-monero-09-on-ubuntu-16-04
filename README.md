@@ -13,7 +13,7 @@ sudo apt update
 sudo apt install git
 
 # install dependencies to be able to compile Monero
-sudo apt install build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen libunwind8-dev pkg-config libssl-dev libcurl4-openssl-dev
+sudo apt install build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen libunwind8-dev pkg-config libssl-dev libcurl4-openssl-dev libgtest-dev
 
 
 # For Fedora 25
