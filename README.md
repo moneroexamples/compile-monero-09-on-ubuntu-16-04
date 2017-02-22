@@ -20,7 +20,16 @@ sudo apt install build-essential cmake libboost-all-dev miniupnpc libunbound-dev
 #
 # sudo dnf install git
 # sudo dnf install make automake cmake gcc-c++ boost-devel miniupnpc-devel graphviz doxygen unbound-devel libunwind-devel pkgconfig openssl-devel libcurl-devel
+```
 
+Ubuntu's `libgtest-dev` only includes sources code. You must build the library binary manually. This can be done with the following commands 
+
+```bash
+# sudo apt-get install libgtest-dev # if not already installed from above
+cd /usr/src/gtest 
+sudo cmake . 
+sudo make 
+sudo mv libg* /usr/lib/
 ```
 
 ## Compilation
