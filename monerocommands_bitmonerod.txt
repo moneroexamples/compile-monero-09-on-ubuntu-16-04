@@ -1,5 +1,7 @@
+alt_chain_info
 ban
 bans
+bc_dyn_stats
 diff
 exit
 flush_txpool
@@ -18,6 +20,7 @@ print_cn
 print_coinbase_tx_sum
 print_height
 print_pl
+print_pl_stats
 print_pool
 print_pool_sh
 print_pool_stats
@@ -34,3 +37,4 @@ stop_daemon
 stop_mining
 stop_save_graph
 unban
+update

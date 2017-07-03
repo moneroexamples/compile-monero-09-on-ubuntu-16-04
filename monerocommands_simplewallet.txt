@@ -1,7 +1,9 @@
 address
+address_book
 balance
 bc_height
 check_tx_key
+donate
 export_key_images
 export_outputs
 get_tx_key
@@ -12,6 +14,7 @@ import_outputs
 incoming_transfers
 integrated_address
 locked_transfer
+password
 payments
 refresh
 rescan_bc
@@ -23,6 +26,7 @@ seed
 set
 set_log
 set_tx_note
+show_transfer
 show_transfers
 sign
 sign_transfer
@@ -35,6 +39,6 @@ sweep_all
 sweep_unmixable
 transfer
 transfer_original
+unspent_outputs
 verify
 viewkey
-
