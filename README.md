@@ -19,7 +19,7 @@ sudo apt install build-essential cmake libboost-all-dev miniupnpc libunbound-dev
 # For Fedora 25
 #
 # sudo dnf install git
-# sudo dnf install make automake cmake gcc-c++ boost-devel miniupnpc-devel graphviz doxygen unbound-devel libunwind-devel pkgconfig openssl-devel libcurl-devel
+# sudo dnf install make automake cmake gcc-c++ boost-devel miniupnpc-devel graphviz doxygen unbound-devel libunwind-devel pkgconfig openssl-devel libcurl-devel libreadline-dev
 ```
 
 Ubuntu's `libgtest-dev` only includes sources code. You must build the library binary manually. This can be done with the following commands 
