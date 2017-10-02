@@ -1,6 +1,6 @@
-# Compile Monero 0.10.1 on Ubuntu 16.04 x64
+# Compile Monero 0.11 on Ubuntu 16.04 x64
 
-The example shows how to compile the current github version of [Monero](https://getmonero.org/), as of 14 Dec 2016, on Ubuntu 16.04 x64 or 16.10.
+The example shows how to compile the current github version of [Monero](https://getmonero.org/), as of 7 Sep 2017, on Ubuntu 16.04 x64 or 16.10.
 
 ## Dependencies
 Before proceeding with the compilation, the following packages are required:
@@ -13,7 +13,7 @@ sudo apt update
 sudo apt install git
 
 # install dependencies to be able to compile Monero
-sudo apt install build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen libunwind8-dev pkg-config libssl-dev libcurl4-openssl-dev libgtest-dev
+sudo apt install build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen libunwind8-dev pkg-config libssl-dev libcurl4-openssl-dev libgtest-dev libreadline-dev libminiupnpc-dev libzmq3-dev
 
 
 # For Fedora 25
