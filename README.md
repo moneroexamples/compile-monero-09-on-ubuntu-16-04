@@ -37,7 +37,7 @@ sudo mv libg* /usr/lib/
 
 ```bash
 # download the latest Monero source code from github
-git clone https://github.com/monero-project/monero
+git clone --recursive https://github.com/monero-project/monero
 
 # go into monero folder
 cd monero/
