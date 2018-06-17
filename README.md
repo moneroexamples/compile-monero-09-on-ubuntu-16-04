@@ -73,7 +73,7 @@ download the blockchain and synchronize itself with the Monero network. After th
 
 ```bash
 # launch the Monero daemon and let it synchronize with the Monero network
-/opt/monero/monerod
+/opt/monero/monerod --detach
 
 # launch the Monero wallet
 /opt/monero/monero-wallet-cli
